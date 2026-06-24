@@ -173,6 +173,7 @@ def run_training():
     # ------------------------------------------------------------------ #
     # Save LSTM model
     # ------------------------------------------------------------------ #
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
     lstm_model.save(MODEL_PATH)
     print(f"\nLSTM model saved to {MODEL_PATH}")
     return lstm_model, arima_metrics, lstm_metrics
