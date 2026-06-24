@@ -1,7 +1,7 @@
-tensorflow==2.21.0
-statsmodels==0.14.2
-numpy==1.26.4
-pandas==2.2.2
-matplotlib==3.8.4
-scikit-learn==1.5.0
-streamlit==1.35.0
+tensorflow
+statsmodels
+numpy
+pandas
+matplotlib
+scikit-learn
+streamlit
