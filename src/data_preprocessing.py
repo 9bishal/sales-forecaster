@@ -110,6 +110,7 @@ def run_pipeline():
     X_train = X_train[..., np.newaxis]
     X_test  = X_test[..., np.newaxis]
 
+    os.makedirs(PROCESSED_DIR, exist_ok=True)
     np.save(os.path.join(PROCESSED_DIR, "X_train.npy"), X_train)
     np.save(os.path.join(PROCESSED_DIR, "X_test.npy"),  X_test)
     np.save(os.path.join(PROCESSED_DIR, "y_train.npy"), y_train)
