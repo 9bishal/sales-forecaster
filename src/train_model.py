@@ -155,7 +155,7 @@ def run_training():
     axes[1].plot(history.history["mae"], label="Train")
     axes[1].plot(history.history["val_mae"], label="Val")
     axes[1].set_title("LSTM MAE"); axes[1].legend()
-    plt.tight_layout(); plt.savefig(HISTORY_PATH, dpi=120); plt.close()
+    plt.tight_layout(); os.makedirs(os.path.dirname(HISTORY_PATH), exist_ok=True); plt.savefig(HISTORY_PATH, dpi=120); plt.close()
 
     # Forecast comparison
     actual = y_test_denorm
@@ -168,7 +168,7 @@ def run_training():
     ax.set_title("Sales Forecast: LSTM vs ARIMA (Test Set)")
     ax.set_xlabel("Day"); ax.set_ylabel("Sales")
     ax.legend()
-    plt.tight_layout(); plt.savefig(PLOT_PATH, dpi=120); plt.close()
+    plt.tight_layout(); os.makedirs(os.path.dirname(PLOT_PATH), exist_ok=True); plt.savefig(PLOT_PATH, dpi=120); plt.close()
 
     # ------------------------------------------------------------------ #
     # Save LSTM model
